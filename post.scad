@@ -7,15 +7,15 @@ $fn = 64;
 crossDiameter = 16;
 crossThickness = 3;
 crossHeight = 17.5;
-crossSupportDiameter = crossDiameter / 1.5;
+crossSupportDiameter = crossDiameter / 2;
 
-baseDiameter = crossDiameter * 2.5;
-baseHeight = 5;
+baseDiameter = crossDiameter * 2;
+baseHeight = 4;
 
 coneHeight = 3;
 
 
-mountingHoleDiameter = 9;
+mountingHoleDiameter = 7;
 mountingHoleAngle = 25;
 mountingFlapDiameter = mountingHoleDiameter * 2.5;
 mountingFlapHeight = baseHeight;
@@ -60,7 +60,7 @@ xflip_copy()
 
 
         
-        translate([baseDiameter / 2 + 2, -2.5, mountingFlapHeight - 0.9])
+        translate([baseDiameter / 2 + 1.5, -2.5, mountingFlapHeight - 0.33])
         {
             cube([2, 4, 1]);
 
