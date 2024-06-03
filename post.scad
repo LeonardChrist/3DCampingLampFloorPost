@@ -51,22 +51,22 @@ xflip_copy()
 
             right(baseDiameter / 2 + mountingFlapDiameter / 2)
                 cyl(d = mountingFlapDiameter, h = mountingFlapHeight, center = false);
+    
+            translate([baseDiameter / 2 + 1.5, -2.5, mountingFlapHeight - 0.66])
+            {
+                cube([2, 4, 1]);
+
+                translate([1, 5, 0])
+                    rot(-135)
+                    linear_extrude(1)   
+                        right_triangle([3, 3]);
+            }
+
+    
         }
     
         up(mountingFlapHeight / 2)
             xrot(mountingHoleAngle)
                 right(baseDiameter / 2 + mountingFlapDiameter / 2)
                     cyl(d = mountingHoleDiameter, h = mountingFlapHeight * 4);
-
-
-        
-        translate([baseDiameter / 2 + 1.5, -2.5, mountingFlapHeight - 0.33])
-        {
-            cube([2, 4, 1]);
-
-            translate([1, 5, 0])
-                rot(-135)
-                linear_extrude(1)   
-                    right_triangle([3, 3]);
-        }
     }
